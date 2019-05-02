@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PageAsuransiMobile">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </include>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_below="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_margin="7dp"
+            android:layout_below="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/lay1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:text="Mohon isi informasi Anda untuk mendapatkan penawaran harga premi yang akurat."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:paddingTop="10dp"
+                android:orientation="vertical"
+                android:layout_below="@+id/lay1"
+                android:id="@+id/lay2"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorTextDetail"
+                    android:text="Harga Mobil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:paddingTop="10dp"
+                android:orientation="vertical"
+                android:layout_below="@+id/lay2"
+                android:id="@+id/lay3"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorTextDetail"
+                    android:text="Tahun Kendaraan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <Spinner
+                    android:layout_weight="1"
+                    android:entries="@array/tahunkendaraan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:paddingTop="10dp"
+                android:orientation="vertical"
+                android:layout_below="@+id/lay3"
+                android:id="@+id/lay4"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorTextDetail"
+                    android:text="Kode Plat Mobil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <Spinner
+                    android:layout_weight="1"
+                    android:entries="@array/kodeplatmobil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:paddingTop="10dp"
+                android:orientation="vertical"
+                android:id="@+id/lay5"
+                android:layout_below="@+id/lay4"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorTextDetail"
+                    android:text="Jenis Perlindungan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <RadioGroup
+                    android:weightSum="2"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:layout_weight="1"
+                        android:textSize="14sp"
+                        android:text="Komprehensif / All Risk"
+                        android:textColor="@color/colorTextDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <RadioButton
+                        android:textColor="@color/colorTextDetail"
+                        android:text="TLO (Total Loss Only)"
+                        android:textSize="14sp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:paddingTop="10dp"
+                android:orientation="vertical"
+                android:id="@+id/lay6"
+                android:layout_below="@+id/lay5"
+                android:weightSum="10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <View
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:background="#bbb"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp" />
+                <TextView
+                    android:padding="10dp"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:drawableRight="@drawable/ic_arrow_upward_black_24dp"
+                    android:textColor="@color/colorTextDetail"
+                    android:text="Perluasan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <View
+                    android:layout_weight="1"
+                    android:background="#bbb"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp" />
+                <CheckBox
+                    android:layout_weight="1"
+                    android:text="Gempa Bumi, Tsunami"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <CheckBox
+                    android:layout_weight="1"
+                    android:text="Banjir, Angin Topan, Angin Ribut"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <CheckBox
+                    android:layout_weight="1"
+                    android:text="Kerusuhan And Huru Hara"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <CheckBox
+                    android:layout_weight="1"
+                    android:text="Terorisme, Sabotase"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <CheckBox
+                    android:layout_weight="1"
+                    android:text="Third Party Liablility (TPL)"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <CheckBox
+                    android:layout_weight="1"
+                    android:text="Kecelakaan Diri Pengemudi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:paddingTop="30dp"
+                android:orientation="vertical"
+                android:id="@+id/lay7"
+                android:layout_below="@+id/lay6"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorTextDetail"
+                    android:text="Harga Premi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <SeekBar
+                    android:paddingTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:paddingTop="30dp"
+                android:orientation="vertical"
+                android:id="@+id/lay8"
+                android:layout_below="@+id/lay7"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorTextDetail"
+                    android:text="Perusahaan Asuransi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <CheckBox
+                                android:layout_weight="1"
+                                android:text="PT Asuransi Adira Dinamika (Syariah)"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <CheckBox
+                                android:layout_weight="1"
+                                android:text="PT. Asuransi Simas Net"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <CheckBox
+                                android:layout_weight="1"
+                                android:text="PT. Avrist General Insurance"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <CheckBox
+                                android:layout_weight="1"
+                                android:text="PT. Malacca Trust Wuwungan Insurance"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <CheckBox
+                                android:layout_weight="1"
+                                android:text="PT Asuransi Himalaya Perlindungan"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <CheckBox
+                                android:layout_weight="1"
+                                android:text="PT. Asuransi Axa Indonesia"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </ScrollView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingTop="30dp"
+                android:orientation="horizontal"
+                android:id="@+id/lay9"
+                android:layout_below="@+id/lay8"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/btnCari"
+                    android:background="@drawable/button_search"
+                    android:text="Cari Asuransi"
+                    android:textColor="#fff"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btnreset"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/button_reset"
+                    android:text="Reset"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

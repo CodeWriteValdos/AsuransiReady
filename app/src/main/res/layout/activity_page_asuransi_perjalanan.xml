@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PageAsuransiPerjalanan">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </include>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_below="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_margin="7dp"
+            android:layout_below="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/lay1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:text="Mohon isi informasi Anda untuk mendapatkan penawaran harga premi yang akurat."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:paddingTop="10dp"
+                android:orientation="vertical"
+                android:layout_below="@+id/lay1"
+                android:id="@+id/lay2"
+                android:weightSum="3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorTextDetail"
+                    android:text="Tujuan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <CheckBox
+                    android:textColor="@color/colorTextDetail"
+                    android:text="Untuk Pengajuan Visa"
+                    android:textSize="14sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:paddingTop="10dp"
+                android:orientation="vertical"
+                android:id="@+id/lay3"
+                android:layout_below="@+id/lay2"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorTextDetail"
+                    android:text="Peserta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <RadioGroup
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:layout_weight="1"
+                        android:textSize="14sp"
+                        android:text="Individu"
+                        android:textColor="@color/colorTextDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <RadioButton
+                        android:textColor="@color/colorTextDetail"
+                        android:text="Keluarga"
+                        android:textSize="14sp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:paddingTop="10dp"
+                android:orientation="vertical"
+                android:id="@+id/lay4"
+                android:layout_below="@+id/lay3"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorTextDetail"
+                    android:text="Periode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <RadioGroup
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:layout_weight="1"
+                        android:textSize="14sp"
+                        android:text="Sekali Jalan"
+                        android:textColor="@color/colorTextDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <RadioButton
+                        android:textColor="@color/colorTextDetail"
+                        android:text="Tahunan"
+                        android:textSize="14sp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:paddingTop="10dp"
+                android:orientation="vertical"
+                android:id="@+id/lay5"
+                android:layout_below="@+id/lay4"
+                android:weightSum="3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorTextDetail"
+                    android:text="Tanggal Perjalanan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:weightSum="3"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/tglawal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TANGGAL AWAL"/>
+                    <TextView
+                        android:layout_gravity="center"
+                        android:paddingRight="50dp"
+                        android:drawingCacheQuality="high"
+                        android:gravity="center"
+                        android:drawableRight="@drawable/ic_arrow_forward_black_24dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/tglakhir"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TANGGAL AKHIR" />
+                </LinearLayout>
+                <LinearLayout
+                    android:weightSum="3"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvawal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="01 OKT 2018"/>
+                    <TextView
+                        android:layout_gravity="center"
+                        android:drawingCacheQuality="high"
+                        android:gravity="center"
+                        android:text="S/D"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/tvakhir"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="10 OKT 2018" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:paddingTop="10dp"
+                android:orientation="vertical"
+                android:id="@+id/lay6"
+                android:layout_below="@+id/lay5"
+                android:weightSum="3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <View
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:background="#bbb"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp" />
+                <TextView
+                    android:padding="10dp"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:drawableRight="@drawable/ic_arrow_forward_black_24dp"
+                    android:textColor="@color/colorTextDetail"
+                    android:text="Filter Lanjutan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <View
+                    android:layout_weight="1"
+                    android:background="#bbb"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:paddingTop="30dp"
+                android:orientation="horizontal"
+                android:id="@+id/lay7"
+                android:layout_below="@+id/lay6"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/btnCari"
+                    android:background="@drawable/button_search"
+                    android:text="Cari Asuransi"
+                    android:textColor="#fff"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btnreset"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/button_reset"
+                    android:text="Reset"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
